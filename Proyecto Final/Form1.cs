@@ -47,9 +47,9 @@ namespace Proyecto_Final
             while (archivo.Peek() > -1)
             {
                 lineaT = archivo.ReadLine();
-                string[] campos = lineaT.Split('#');
-                usuario = (campos[0]);
-                contraseña = (campos[1]);
+                string[] campos = lineaT.Split('/');
+                usuario = (campos[1]);
+                contraseña = (campos[2]);
 
 
                 if (usuarioa == usuario && contraseñaa == contraseña)

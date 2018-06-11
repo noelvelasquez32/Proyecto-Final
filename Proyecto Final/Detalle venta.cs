@@ -8,9 +8,13 @@ namespace Proyecto_Final
 {
     class Detalle_venta
     {
+        private int iddetalle;
+        private int idventa;
         private int idproducto;
+        private string nombreProducto;
         private decimal total;
         private int cantidad;
+        private decimal precio;
 
         public int Idproducto
         {
@@ -51,19 +55,99 @@ namespace Proyecto_Final
             }
         }
 
+        public decimal Precio
+        {
+            get
+            {
+                return precio;
+            }
+
+            set
+            {
+                precio = value;
+            }
+        }
+
+        public string NombreProducto
+        {
+            get
+            {
+                return nombreProducto;
+            }
+
+            set
+            {
+                nombreProducto = value;
+            }
+        }
+
+        public int Iddetalle
+        {
+            get
+            {
+                return iddetalle;
+            }
+
+            set
+            {
+                iddetalle = value;
+            }
+        }
+
+        public int Idventa
+        {
+            get
+            {
+                return idventa;
+            }
+
+            set
+            {
+                idventa = value;
+            }
+        }
 
         public Detalle_venta()
         {
 
         }
 
-        public Detalle_venta(int idproducto, decimal total, int cantidad)
+        public Detalle_venta(int iddetalle,int idventa,int idproducto, string nombreproducto, decimal total, int cantidad, decimal precio)
         {
+            this.Iddetalle = iddetalle;
+            this.Idventa = idventa;
             this.Idproducto = idproducto;
+            this.NombreProducto = nombreProducto;
             this.Total = total;
             this.Cantidad = cantidad;
-
+            this.Precio = precio;
         }
 
+        public string guardar(Detalle_venta detalle)
+        {
+            string respuesta = "";
+
+            int iddetalle;
+            int idventa;
+            int idproducto;
+            string nombreproducto;
+            decimal total;
+            int cantidad;
+            decimal precio;
+
+            iddetalle = detalle.Iddetalle;
+            idventa = detalle.Idventa;
+            idproducto = detalle.Idproducto;
+            nombreproducto = detalle.NombreProducto;
+            total = detalle.Total;
+            cantidad = detalle.Cantidad;
+            precio = detalle.Precio;
+
+            respuesta = "guardo";
+
+            return respuesta;
+
+        }
+        
     }
 }
