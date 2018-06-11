@@ -10,7 +10,7 @@ namespace Proyecto_Final
     {
         private string nombre;
         private string apellido;
-        private string edad;
+        private int edad;
         private string nit;
 
         public string Nombre
@@ -39,7 +39,7 @@ namespace Proyecto_Final
             }
         }
 
-        public string Edad
+        public int Edad
         {
             get
             {
@@ -65,17 +65,19 @@ namespace Proyecto_Final
             }
         }
 
+
+
         public Cliente()
         {
 
         }
 
-        public Cliente(string nombre, string apellido, string edad, string nit)
+        public Cliente(string nombre, string apellido, int edad, string nit)
         {
             this.Nombre = nombre;
-            this.Nombre = apellido;
-            this.Nombre = edad;
-            this.Nombre = nit;
+            this.Apellido = apellido;
+            this.Edad = edad;
+            this.Nit = nit;
 
         }
 

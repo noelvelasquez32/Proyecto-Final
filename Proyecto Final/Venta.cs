@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace Proyecto_Final
 {
@@ -12,7 +13,7 @@ namespace Proyecto_Final
        private string idcliente;
        private string factura;
        private decimal totalfinal;
-
+     
 
         public int Idventa
         {
@@ -81,6 +82,31 @@ namespace Proyecto_Final
 
         }
 
+        public string guardar(Venta venta, List<Detalle_venta>detalle)
+        {
+            string respuesta = "";
+            return respuesta;
+            
+            int idventa;
+            string idcliente;
+            string factura;
+            decimal totalfinal;
+            
+
+            idventa = venta.Idventa;
+            idcliente = venta.Idcliente;
+            factura = venta.Factura;
+            totalfinal = venta.Totalfinal;
+
+            foreach (Detalle_venta det in detalle)
+            {
+                det.Idventa = this.Idventa;
+                det.guardar(det);
+                break;
+
+            }
+        
+        }
 
     }
 }

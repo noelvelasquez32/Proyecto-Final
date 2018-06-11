@@ -8,7 +8,11 @@ namespace Proyecto_Final
 {
     class Productos
     {
+        private int id;
         private string nombre;
+        private decimal precio;
+        private int existencia;
+       
 
         public string Nombre
         {
@@ -23,16 +27,59 @@ namespace Proyecto_Final
             }
         }
 
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
+            }
+        }
+
+        public decimal Precio
+        {
+            get
+            {
+                return precio;
+            }
+
+            set
+            {
+                precio = value;
+            }
+        }
+
+        public int Existencia
+        {
+            get
+            {
+                return existencia;
+            }
+
+            set
+            {
+                existencia = value;
+            }
+        }
 
         public Productos()
         {
 
         }
 
-        public Productos(string nombre)
+        public Productos(int id,string nombre, decimal precio, int existencia)
         {
+            this.Id = id;
             this.Nombre = nombre;
+   
+            this.Precio = precio;
+            this.Existencia = existencia;
         }
+
 
 
 

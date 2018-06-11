@@ -21,5 +21,15 @@ namespace Proyecto_Final
         {
 
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbltotal_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
