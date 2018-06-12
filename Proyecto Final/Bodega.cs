@@ -21,5 +21,10 @@ namespace Proyecto_Final
         {
 
         }
+
+        private void Bodega_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

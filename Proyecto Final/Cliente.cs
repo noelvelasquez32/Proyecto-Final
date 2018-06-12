@@ -8,6 +8,13 @@ namespace Proyecto_Final
 {
     class Cliente
     {
+        private int id;
+
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
         private string nombre;
         private string apellido;
         private int edad;
@@ -72,8 +79,9 @@ namespace Proyecto_Final
 
         }
 
-        public Cliente(string nombre, string apellido, int edad, string nit)
+        public Cliente(int id,string nombre, string apellido, int edad, string nit)
         {
+            this.Id = id;
             this.Nombre = nombre;
             this.Apellido = apellido;
             this.Edad = edad;

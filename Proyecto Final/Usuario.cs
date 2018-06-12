@@ -13,6 +13,7 @@ namespace Proyecto_Final
 {
     public partial class Usuario : Form
     {
+        int contador=7;
         string Archivo = "C:\\Users\\Wilmar Velàsquez\\Desktop\\Proyecto Final\\Usuarios.txt";
         public Usuario()
         {
@@ -21,12 +22,14 @@ namespace Proyecto_Final
 
         private void Usuario_Load(object sender, EventArgs e)
         {
-
+            txtId.Text = contador.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            {
+             
+                
+                
                 Usuariovendedor producto = new Usuariovendedor (Convert.ToInt32(txtId.Text), txtUsuario.Text, txtContrasena.Text);
 
                 StreamWriter Escribir = File.AppendText(Archivo);
@@ -34,9 +37,14 @@ namespace Proyecto_Final
                 Escribir.WriteLine(txtId.Text + "/" + txtUsuario.Text + "/" + txtContrasena.Text);
                 MessageBox.Show("Los datos se guardaro");
                 Escribir.Close();
+                contador++;
+                Globales.idusuario = contador;
+                txtId.Text = Globales.idusuario.ToString();
+                txtUsuario.Text = "";
+                txtContrasena.Text = "";
+                
 
-
-            }
+            
         }
     }
 }

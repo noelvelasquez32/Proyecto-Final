@@ -1,4 +1,9 @@
-1#juan#001
-2#miguel#002
-3#maria#003
-4#pablo#004
+1/juan/001
+2/miguel/002
+3/angel/003
+4/rosario/004
+5/angela/005
+6/pedro/123
+7/tono/123
+8/jony/34
+9/nelson/123

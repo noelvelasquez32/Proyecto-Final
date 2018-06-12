@@ -9,48 +9,35 @@ namespace Proyecto_Final
 {
     class Venta
     {
-       private int idventa;
-       private string idcliente;
-       private string factura;
+    
+       private string cliente;
+        private DateTime fecha;
        private decimal totalfinal;
-     
+        private string usuario;
 
-        public int Idventa
+        public string Cliente
         {
             get
             {
-                return idventa;
+                return cliente;
             }
 
             set
             {
-                idventa = value;
+                cliente = value;
             }
         }
 
-        public string Idcliente
+        public DateTime Fecha
         {
             get
             {
-                return idcliente;
+                return fecha;
             }
 
             set
             {
-                idcliente = value;
-            }
-        }
-
-        public string Factura
-        {
-            get
-            {
-                return factura;
-            }
-
-            set
-            {
-                factura = value;
+                fecha = value;
             }
         }
 
@@ -67,46 +54,32 @@ namespace Proyecto_Final
             }
         }
 
+        public string Usuario
+        {
+            get
+            {
+                return usuario;
+            }
+
+            set
+            {
+                usuario = value;
+            }
+        }
 
         public Venta()
         {
 
         }
 
-        public Venta(int idventa, string idcliente, string factura, decimal totalfinal)
+        public Venta(string cliente, DateTime fecha, decimal totalfianal, string usuario)
         {
-            this.Idventa = idventa;
-            this.Idcliente = idcliente;
-            this.Factura = factura;
-            this.Totalfinal = totalfinal;
-
+            this.Cliente = cliente;
+            this.Fecha = fecha;
+            this.Totalfinal = totalfianal;
+            this.Usuario = usuario;
         }
 
-        public string guardar(Venta venta, List<Detalle_venta>detalle)
-        {
-            string respuesta = "";
-            return respuesta;
-            
-            int idventa;
-            string idcliente;
-            string factura;
-            decimal totalfinal;
-            
-
-            idventa = venta.Idventa;
-            idcliente = venta.Idcliente;
-            factura = venta.Factura;
-            totalfinal = venta.Totalfinal;
-
-            foreach (Detalle_venta det in detalle)
-            {
-                det.Idventa = this.Idventa;
-                det.guardar(det);
-                break;
-
-            }
-        
-        }
 
     }
 }

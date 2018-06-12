@@ -17,7 +17,7 @@ namespace Proyecto_Final
         string lineaT;
         string usuario;
         string contraseña;
-        string usuarioa;
+        public string usuarioa;
         string contraseñaa;
 
         bool correcto = false;
@@ -34,15 +34,18 @@ namespace Proyecto_Final
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            string fileName = @"C:\Users\Wilmar Velàsquez\Desktop\Proyecto Final\Usuarios.txt";
-;
+
+            string fileName = @"C:\\Users\\Wilmar Velàsquez\\Desktop\\Proyecto Final\\Usuarios.txt";
+
             //Abrimos el archivo, en este caso lo abrimos para lectura
             FileStream stream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
             StreamReader archivo = new StreamReader(stream);
 
-            usuarioa = Convert.ToString(textBox1.Text);
+            
+            usuarioa = Convert.ToString(txtUsuario.Text);
             contraseñaa = Convert.ToString(textBox2.Text);
+            Globales.usuario = usuario;
+
 
             while (archivo.Peek() > -1)
             {
@@ -56,8 +59,10 @@ namespace Proyecto_Final
                 {
                     correcto = true;
 
-                    Seleccion llamar = new Seleccion();
-                    llamar.Show();
+                    formPrincipal principal = new formPrincipal();
+                    principal.Show();
+                    MessageBox.Show("Bienvendio");
+                    this.Hide();
                     break;
 
 
@@ -72,28 +77,7 @@ namespace Proyecto_Final
                 }
             }
 
-            //if (usuarioa == usuario && contraseñaa == contraseña)
-            //{
-            //    correcto = true;
 
-
-            //}
-            //else
-            //{
-            //    correcto = false;
-
-            //}
-            //if (correcto == false)
-            //{
-            //    MessageBox.Show("Datos incorrectos");
-            //}
-            //else
-            //{
-
-            //    Seleccion llamar = new Seleccion();
-            //    llamar.Show();
-
-            //}
 
             archivo.Close();
 
